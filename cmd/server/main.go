@@ -18,11 +18,11 @@ import (
 )
 
 // main method starts everything for the BUX Server
-// @title           BUX: Server
-// @version         v0.4.0
-// @securityDefinitions.apikey bux-auth-xpub
-// @in header
-// @name bux-auth-xpub
+//	@title						BUX: Server
+//	@version					v0.4.0
+//	@securityDefinitions.apikey	bux-auth-xpub
+//	@in							header
+//	@name						bux-auth-xpub
 func main() {
 
 	// Load the Application Configuration
@@ -39,7 +39,7 @@ func main() {
 		return
 	}
 
-	// @mrz New Relic is ready at this point
+	//	@mrz	New Relic is ready at this point
 	txn := services.NewRelic.StartTransaction("load_server")
 
 	// Validate configuration (after services have been loaded)
