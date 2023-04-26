@@ -13,15 +13,14 @@ import (
 // Count of access keys godoc
 // @Summary     	Count of access keys
 // @Description 	Count of access keys
-// @Tags			access-key
+// @Tags			Access-key
 // @Produce     	json
-// @Param       	metadata query string false "metadata"
-// @Param       	conditions query string false "conditions"
+// @Param			metadata query string false "metadata"
+// @Param			conditions query string false "conditions"
 // @Success     	200
 // @Router      	/v1/access-key/count [post]
 // @Security 		bux-auth-xpub
 func (a *Action) count(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-
 	reqXPubID, _ := bux.GetXpubIDFromRequest(req)
 
 	// Parse the params

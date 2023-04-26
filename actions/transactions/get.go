@@ -12,9 +12,9 @@ import (
 // Get transaction by id godoc
 // @Summary     	Get transaction by id
 // @Description 	Get transaction by id
-// @Tags			transaction
+// @Tags			Transactions
 // @Produce     	json
-// @Param       	id query string true "id"
+// @Param			id query string true "id"
 // @Success     	200
 // @Router      	/v1/transaction [get]
 // @Security 		bux-auth-xpub

@@ -15,13 +15,12 @@ import (
 // @Description 	Create xPub
 // @Tags			xPub
 // @Produce     	json
-// @Param       	key query string true "key"
-// @Param       	metadata query string false "metadata"
+// @Param			key query string true "key"
+// @Param			metadata query string false "metadata"
 // @Success     	201
 // @Router      	/v1/xpub [post]
 // @Security 		bux-auth-xpub
 func (a *Action) create(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-
 	// Parse the params
 	params := apirouter.GetParams(req)
 

@@ -15,13 +15,12 @@ import (
 // @Description 	Count of UTXOs
 // @Tags			UTXO
 // @Produce     	json
-// @Param       	metadata query string false "metadata"
-// @Param       	conditions query string false "conditions"
+// @Param			metadata query string false "metadata"
+// @Param			conditions query string false "conditions"
 // @Success     	200
 // @Router      	/v1/utxo/count [post]
 // @Security 		bux-auth-xpub
 func (a *Action) count(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-
 	reqXPubID, _ := bux.GetXpubIDFromRequest(req)
 
 	// Parse the params
@@ -32,7 +31,7 @@ func (a *Action) count(w http.ResponseWriter, req *http.Request, _ httprouter.Pa
 		return
 	}
 
-	var dbConditions = map[string]interface{}{}
+	dbConditions := map[string]interface{}{}
 	if conditions != nil {
 		dbConditions = *conditions
 	}
