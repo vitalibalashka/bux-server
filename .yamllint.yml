@@ -7,7 +7,7 @@ yaml-files:
 
 ignore: |
   dist/
-  *.swagger.yaml
+  */swagger.yaml
 
 rules:
   braces: enable
